@@ -1,0 +1,68 @@
+export const devices = [
+  {
+    id: 'sw-core-01',
+    name: 'Core Switch 01',
+    vendor: 'Cisco',
+    type: 'L3 Switch',
+    ip: '10.10.0.2',
+    site: 'Data Center',
+    status: 'online',
+    cpu: 42,
+    memory: 61,
+    uptime: '126d 08h',
+    lastBackup: 'Today 09:20',
+  },
+  {
+    id: 'r-edge-01',
+    name: 'Edge Router 01',
+    vendor: 'Juniper',
+    type: 'Router',
+    ip: '10.10.0.1',
+    site: 'HQ',
+    status: 'online',
+    cpu: 34,
+    memory: 48,
+    uptime: '88d 14h',
+    lastBackup: 'Today 08:12',
+  },
+  {
+    id: 'fw-branch-03',
+    name: 'Branch Firewall 03',
+    vendor: 'MikroTik',
+    type: 'Firewall',
+    ip: '10.21.3.1',
+    site: 'Jaipur Branch',
+    status: 'warning',
+    cpu: 76,
+    memory: 72,
+    uptime: '14d 03h',
+    lastBackup: 'Yesterday 22:00',
+  },
+  {
+    id: 'sw-access-12',
+    name: 'Access Switch 12',
+    vendor: 'Aruba',
+    type: 'Access Switch',
+    ip: '10.21.12.5',
+    site: 'Campus B',
+    status: 'offline',
+    cpu: 0,
+    memory: 0,
+    uptime: 'Unavailable',
+    lastBackup: 'May 17 20:10',
+  },
+];
+
+export const backups = [
+  { id: 'BKP-1042', device: 'Core Switch 01', status: 'completed', size: '42 KB', createdAt: 'Today 09:20' },
+  { id: 'BKP-1041', device: 'Edge Router 01', status: 'completed', size: '36 KB', createdAt: 'Today 08:12' },
+  { id: 'BKP-1040', device: 'Branch Firewall 03', status: 'completed', size: '29 KB', createdAt: 'Yesterday 22:00' },
+  { id: 'BKP-1039', device: 'Access Switch 12', status: 'failed', size: '-', createdAt: 'May 17 20:10' },
+];
+
+export const logs = [
+  { id: 'LOG-2217', level: 'success', action: 'Configuration backup completed', target: 'Core Switch 01', user: 'admin', time: '09:20' },
+  { id: 'LOG-2216', level: 'success', action: 'VLAN 120 provisioned', target: 'Core Switch 01, Access Switch 12', user: 'operator', time: '08:44' },
+  { id: 'LOG-2215', level: 'warning', action: 'High memory utilization detected', target: 'Branch Firewall 03', user: 'system', time: '08:31' },
+  { id: 'LOG-2214', level: 'error', action: 'SSH connection timeout', target: 'Access Switch 12', user: 'system', time: '07:58' },
+];
